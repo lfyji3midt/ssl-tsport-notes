@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t足球 · 稳定触达，从这里开始</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f2f2f3;
+      color: #2c2c2e;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    /* hero 区 */
+    .hero {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 3.5rem 2.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+      margin-bottom: 2.5rem;
+      border: 1px solid #e7e7e9;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #1c1c1e;
+      margin-bottom: 0.75rem;
+    }
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #636366;
+      max-width: 580px;
+      margin-bottom: 2rem;
+      border-left: 3px solid #007aff;
+      padding-left: 1rem;
+    }
+    .hero .tagline {
+      display: inline-block;
+      background: #f0f0f2;
+      border-radius: 30px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.95rem;
+      color: #3a3a3c;
+      border: 1px solid #dcdcde;
+    }
+    /* 卡片通用 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 1.8rem 2rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+      border: 1px solid #eaeaec;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #4a4a4d;
+      margin-bottom: 0.6rem;
+    }
+    .card .icon-placeholder {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #007aff;
+      border-radius: 50%;
+      margin-right: 0.4rem;
+      opacity: 0.7;
+    }
+    /* 说明区（宽卡） */
+    .explain-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2.2rem 2.2rem 2.4rem;
+      border: 1px solid #eaeaec;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+      margin-bottom: 2.5rem;
+    }
+    .explain-card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1c1c1e;
+    }
+    .explain-card .highlight {
+      background: #f8f8fa;
+      padding: 1rem 1.4rem;
+      border-radius: 14px;
+      border-left: 3px solid #007aff;
+      margin: 1.2rem 0;
+      font-size: 0.95rem;
+    }
+    /* FAQ 摘要 */
+    .faq-summary {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2rem 1.5rem;
+      border: 1px solid #eaeaec;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+      margin-bottom: 2.5rem;
+    }
+    .faq-summary h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #efeff1;
+      padding: 0.9rem 0;
+    }
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      color: #1c1c1e;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .faq-item span {
+      font-size: 0.9rem;
+      color: #636366;
+    }
+    /* 底部链接 */
+    .bottom-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0.5rem;
+      font-size: 0.9rem;
+      color: #6e6e73;
+      border-top: 1px solid #dcdcde;
+      margin-top: 1rem;
+    }
+    .bottom-links a {
+      color: #2c2c2e;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .bottom-links a:hover {
+      border-bottom-color: #007aff;
+    }
+    .bottom-links .site-link {
+      font-weight: 500;
+    }
+    .bottom-links .site-link a {
+      color: #007aff;
+    }
+    /* 响应式 */
+    @media (max-width: 680px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .hero {
+        padding: 2rem 1.5rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .explain-card, .faq-summary {
+        padding: 1.5rem;
+      }
+      .bottom-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero 区 -->
+    <section class="hero">
+      <h1>t足球 · 稳定的落脚点</h1>
+      <div class="sub">
+        一个让日常查看更顺畅的页面入口，不绕路、不卡顿。
+      </div>
+      <div class="tagline">⚽ 页面本身轻快，内容直接</div>
+    </section>
+
+    <!-- 优势区（双卡片） -->
+    <div class="card-grid">
+      <div class="card">
+        <h3><span class="icon-placeholder"></span> 入口稳定</h3>
+        <p>页面结构清晰，没有复杂跳转。每次打开都是同样的干净界面，适合需要快速触达的使用习惯。</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #8c8c90;">—— 省去多余步骤，直接面对内容本身。</p>
+      </div>
+      <div class="card">
+        <h3><span class="icon-placeholder"></span> 页面说明</h3>
+        <p>这里不堆砌信息，只展示必要的描述和引导。卡片式分区让浏览节奏更从容，无论是找信息还是简单翻阅都很顺手。</p>
+      </div>
+    </div>
+
+    <!-- 说明区 -->
+    <section class="explain-card">
+      <h2>从日常使用出发</h2>
+      <p>很多人打开一个页面，心里想的只是「快点看到想看的」。所以这个页面刻意保持了克制的排版和柔和的视觉，让注意力不被分散。</p>
+      <div class="highlight">
+        ⚡ 一句话概括：如果你需要一条清晰的路径指向 <a href="https://ssl-tsport.com" style="color: #007aff; text-decoration: none; font-weight: 500;">t足球</a>，这里就是那个起点。
+      </div>
+      <p style="color: #4a4a4d;">页面本身不承载复杂功能，它更像是提前为你整理好的一个便签——上面写着：目标在这里，直接过去就好。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section class="faq-summary">
+      <h2>一些你可能想问的</h2>
+      <div class="faq-item">
+        <strong>这个页面是做什么的？</strong>
+        <span>简洁的介绍页，用于展示指向 <a href="https://ssl-tsport.com" style="color: #2c2c2e; text-decoration: underline; text-underline-offset: 2px;">t足球</a> 的稳定入口。没有隐藏菜单，没有多余开关。</span>
+      </div>
+      <div class="faq-item">
+        <strong>为什么选择这个入口？</strong>
+        <span>页面经过基础适配，在手机和电脑上都能保持同样的卡片布局和阅读节奏。链接直接，不经过中间页。</span>
+      </div>
+      <div class="faq-item">
+        <strong>内容会频繁变化吗？</strong>
+        <span>页面结构固定，但每次呈现的说明角度会有所调整。整体保持生活化且正式的风格，不会突然变成广告页。</span>
+      </div>
+    </section>
+
+    <!-- 底部链接区 -->
+    <div class="bottom-links">
+      <div>
+        <span>© 2025 · 页面文档</span>
+      </div>
+      <div class="site-link">
+        <a href="https://ssl-tsport.com">t足球</a>
+      </div>
+      <div style="font-size: 0.85rem; color: #8c8c90;">
+        卡片式 · 轻量说明
+      </div>
+    </div>
+  </div>
+</body>
+</html>
