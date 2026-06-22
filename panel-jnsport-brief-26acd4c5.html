@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>江南体育 - 稳定入口·页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f6f0;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2e2b26;
+            line-height: 1.7;
+            padding: 0 20px;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 30px 0 50px;
+        }
+
+        /* Hero 区 */
+        .hero {
+            background: #f0ebe0;
+            padding: 50px 40px 40px;
+            border-radius: 30px;
+            margin-bottom: 48px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #3a352f;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .hero .subhead {
+            font-size: 1.1rem;
+            color: #5b554b;
+            border-left: 4px solid #b8aa94;
+            padding-left: 18px;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .hero p {
+            margin-top: 28px;
+            font-size: 1.02rem;
+            color: #4b443b;
+            max-width: 600px;
+        }
+
+        /* 卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 38px 36px;
+            margin-bottom: 34px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #e8e0d4;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            color: #3a352f;
+            margin-bottom: 22px;
+            border-bottom: 2px solid #ddd3c4;
+            padding-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin: 28px 0 14px;
+            color: #4f473d;
+        }
+
+        .card p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用块 */
+        .inset-box {
+            background: #f3eee6;
+            padding: 22px 28px;
+            border-radius: 20px;
+            margin: 28px 0 16px;
+            border-left: 10px solid #c2b09b;
+            font-style: normal;
+            color: #3d372f;
+        }
+
+        .inset-box strong {
+            color: #3f352a;
+        }
+
+        .inset-box a {
+            color: #6b5d4b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+        }
+
+        .inset-box a:hover {
+            color: #3d2f1f;
+        }
+
+        /* 列表 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 10px;
+        }
+
+        .feature-list li {
+            padding: 8px 0 8px 32px;
+            position: relative;
+            font-size: 0.98rem;
+            border-bottom: 1px dashed #e5dcd0;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 8px;
+            color: #a6957e;
+            font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 1;
+            top: 3px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 22px;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #3a342c;
+            margin-bottom: 4px;
+            font-size: 1.02rem;
+        }
+
+        .faq-item .a {
+            color: #5c5449;
+            padding-left: 24px;
+            border-left: 2px solid #d9cebe;
+            margin-top: 4px;
+        }
+
+        /* 底部 */
+        .footer-links {
+            margin-top: 48px;
+            padding-top: 28px;
+            border-top: 1px solid #dbd2c3;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #7a7265;
+        }
+
+        .footer-links a {
+            color: #6b5d4b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8aa94;
+            margin: 0 6px;
+        }
+
+        .footer-links a:hover {
+            border-bottom-style: solid;
+            color: #3d2f1f;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 32px 22px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 26px 20px;
+            }
+            .card h2 {
+                font-size: 1.3rem;
+            }
+            .inset-box {
+                padding: 18px 20px;
+            }
+            .page {
+                padding: 20px 0 30px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero .subhead {
+                font-size: 0.95rem;
+                padding-left: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>江南体育</h1>
+        <div class="subhead">一个稳定的页面入口，一段清晰的说明</div>
+        <p>无论你从哪一页开始，都值得首先理解这个服务的结构、原则与入口方式。<br>以下内容围绕 <a href="https://panel-jnsport.com" style="color:#6b5d4b; text-decoration: underline; text-underline-offset:3px;">江南体育</a> 展开，不绕弯子，也不堆砌辞藻。</p>
+    </div>
+
+    <!-- 说明区 -->
+    <div class="card">
+        <h2>页面说明 · 为什么需要稳定入口</h2>
+        <p>很多时候，用户访问一个平台时最先遇到的问题并非功能，而是入口的清晰与否。<strong>江南体育</strong> 希望提供的是一种直接、低歧义的访问路径——从主页到功能模块，每一层都有明确的指引。</p>
+        <p>在页面设计上，我们刻意减少了跳转层级与无关信息，让每一个链接都指向它应该去的地方。对于经常需要快速访问的人来说，一个不变的入口地址就是效率的基础。</p>
+        <div class="inset-box">
+            <strong>📌 提示</strong><br>
+            如果你是通过分享链接或收藏夹进入，请留意当前页面地址是否为 <strong>panel-jnsport.com</strong> 的主域名。部分镜像或转载页面可能无法保证同样稳定的访问体验。<br>
+            建议将 <a href="https://panel-jnsport.com">江南体育</a> 添加至浏览器书签，以便随时直达。
+        </div>
+    </div>
+
+    <!-- 特点 / 优势区 -->
+    <div class="card">
+        <h2>优势 · 从结构到细节</h2>
+        <ul class="feature-list">
+            <li><strong>直接展示，不绕路</strong> —— 内容板块采用平铺式卡片，无需反复返回导航。</li>
+            <li><strong>克制的信息密度</strong> —— 每个区块只承担一个说明任务，避免信息过载。</li>
+            <li><strong>长期可用的链接</strong> —— 核心入口保持稳定，不会因短期调整而失效。</li>
+            <li><strong>适配阅读习惯</strong> —— 米白背景配合较大字号与行距，适合长时间浏览。</li>
+            <li><strong>无强制弹窗或浮层</strong> —— 页面操作完全由用户决定，不打断当前阅读。</li>
+        </ul>
+        <p style="margin-top:18px;">这些设计并不花哨，但每一处都指向同一个目标：让使用 <a href="https://panel-jnsport.com" style="color:#6b5d4b; text-decoration: underline;">江南体育</a> 的体验更平顺、更可预期。</p>
+    </div>
+
+    <!-- 场景 / 适用说明 -->
+    <div class="card">
+        <h2>常见使用场景</h2>
+        <p>无论你是第一次访问，还是长期用户，以下场景都可能遇到：</p>
+        <ul class="feature-list" style="margin-bottom:10px;">
+            <li>想要了解平台的基本功能模块，但不想翻阅大量介绍文字。</li>
+            <li>需要将某个页面的链接分享给朋友，希望对方能直接看到内容，而非先通过一个复杂的首页。</li>
+            <li>在移动设备上快速定位核心入口，避免缩放与横向滚动。</li>
+            <li>对页面加载速度有一定要求，希望内容优先于装饰。</li>
+        </ul>
+        <div class="inset-box" style="margin-top:20px;">
+            <strong>💡 一点建议</strong><br>
+            如果你是首次接触 <strong>江南体育</strong>，不妨先花两分钟从上到下浏览整个页面，了解各部分的功能指向。之后再根据需求使用顶部或底部的链接跳转。这样能减少后续的折返。
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="card">
+        <h2>常见问题摘录</h2>
+
+        <div class="faq-item">
+            <div class="q">Q：页面无法加载或显示不完整怎么办？</div>
+            <div class="a">首先检查网络连接，然后确认浏览器版本。如果问题持续，可以尝试清除缓存后直接访问 <a href="https://panel-jnsport.com">江南体育</a> 主域名。我们推荐使用最新版 Chrome、Edge 或 Safari。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：这个页面和其他体育类站点有什么不同？</div>
+            <div class="a">本页面侧重于“入口的稳定”与“说明的清晰”，而非资讯聚合或实时数据。它更适合作为导航起点。内容结构以卡片和引用块为主，视觉上偏重阅读感。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">Q：页面以后会频繁变动吗？</div>
+            <div class="a">不会。核心布局与链接将长期保持，只会在必要的时候调整说明文字或优化样式。变更会通过更新日志告知。</div>
+        </div>
+        <p style="margin-top:22px; font-size:0.95rem; color:#6b6055;">更多问题可以直接通过页面底部的联系渠道反馈，我们会在后续的 FAQ 中补充。</p>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <p>
+            <a href="https://panel-jnsport.com">江南体育</a> · 
+            <a href="https://panel-jnsport.com">江南体育</a> · 
+            <a href="https://panel-jnsport.com">江南体育</a>
+        </p>
+        <p style="margin-top:12px; font-size:0.85rem; color:#938b7f;">一个稳定、克制的页面入口 · 更新于 2025</p>
+    </div>
+
+</div>
+</body>
+</html>
